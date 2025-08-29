@@ -12,7 +12,7 @@ ICONS_MAP = {
     "google-chrome": " Chrome ",
     "thunar": " Files ",
     "code-oss": " ",
-    "jetbrains-idea": "  JetBrains ",
+    "jetbrains-idea-ce": "  JetBrains ",
     "vlc": " VLC ",
     "default": "  ", # Ícone padrão para janelas não mapeadas
 }
