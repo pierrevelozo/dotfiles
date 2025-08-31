@@ -196,6 +196,20 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 
+# Color shemes for windows 
+
+set $bgcolor    #112140
+set $in-bgcolor #1F438C
+set $text       #ffffff
+set $u-bgcolor  #ff0000
+set $indicator  #a8a3c1
+set $in-text    #969696
+
+#                       border          background      text            indicator (a line which shows where the next window will be placed)     
+client.focused          $bgcolor        $bgcolor        $text           $indicator
+client.unfocused        $in-bgcolor     $in-bgcolor     $in-text        $in-bgcolor
+client.focused_inactive $in-bgcolor     $in-bgcolor     $in-text        $in-bgcolor
+client.urgent           $u-bgcolor      $u-bgcolor      $text           $u-bgcolor
 
 
 bar {
@@ -208,26 +222,13 @@ bar {
 		background $bgcolor
                 separator #191919
                 #                       border          background      text
-                focused_workspace       $bgcolor        $bgcolor        $text
-                inactive_workspace      $in-bgcolor     $in-bgcolor     $text
+                focused_workspace       $in-bgcolor     $in-bgcolor     $text
+                inactive_workspace      $bgcolor        $bgcolor        $text
                 urgent_workspace        $u-bgcolor      $u-bgcolor      $text  	
 	
 	}
 }
-
-
-# Color shemes for windows 
-set $bgcolor    #523d64
-set $in-bgcolor #363636
-set $text       #ffffff
-set $u-bgcolor  #ff0000
-set $indicator  #a8a3c1
-set $in-text    #969696
-#                       border          background      text            indicator (a line which shows where the next window will be placed)     
-client.focused          $bgcolor        $bgcolor        $text           $indicator
-client.unfocused        $in-bgcolor     $in-bgcolor     $in-text        $in-bgcolor
-client.focused_inactive $in-bgcolor     $in-bgcolor     $in-text        $in-bgcolor
-client.urgent           $u-bgcolor      $u-bgcolor      $text           $u-bgcolor 
+ 
 
 # Transparência
 
@@ -235,7 +236,6 @@ client.urgent           $u-bgcolor      $u-bgcolor      $text           $u-bgcol
 #exec_always --no-startup-id picom --backend egl
 
 exec_always --no-startup-id killall -q picom; picom --config ~/.config/picom/picom.conf
-
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 
 
@@ -244,19 +244,18 @@ exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 # Defina o estilo da borda para não ter barra de título, apenas uma linha fina.
 # Use a regra for_window para garantir que se aplique a tudo.
 
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2W
 
 # Esconda as bordas de janelas que não têm vizinhas.
 # A opção "smart" é a mais popular: a borda só aparece se houver
 # mais de uma janela no mesmo contêiner.
 
-#hide_edge_borders smart 
+hide_edge_borders smart 
 
 #Notificações
 exec_always --no-startup-id dunst
 
-# Wallpaper
-
+# Wallpaper Nitrogen
 exec_always --no-startup-id nitrogen --restore
 
 #### Default gaps
@@ -264,20 +263,7 @@ gaps inner 15
 gaps outer 5
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Gaps
+# Configurações Gaps
 set $mode_gaps Gaps: (o)uter, (i)nner, (h)orizontal, (v)ertical, (t)op, (r)ight, (b)ottom, (l)eft
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
 set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)

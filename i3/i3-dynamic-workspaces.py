@@ -7,14 +7,18 @@ import i3ipc
 ICONS_MAP = {
     "xfce4-terminal": " Terminal ",
     "spotify": "ᯤ Spotify ",
+    "keepassxc": "🗝 KeepassXC",
     "zen": "🔍︎ Zen ", # Mantendo o seu "zen"
+    "discord-canary": "🗨 Discord ",
+    "com-azefsw-audioconnect-desktop-app-MainKt": "🎤︎︎ AudioRelay ",
     "firefox": " Firefox ",
     "google-chrome": " Chrome ",
     "thunar": " Files ",
     "code-oss": " ",
     "jetbrains-idea-ce": "  JetBrains ",
+    "code": " VSCode",
     "vlc": " VLC ",
-    "default": "  ", # Ícone padrão para janelas não mapeadas
+    "default": " ", # Ícone padrão para janelas não mapeadas
 }
 
 def get_icon_for_window(window):
@@ -40,7 +44,7 @@ def rename_workspaces(i3, _):
         
         # Formata o novo nome do workspace
         icon_str = " ".join(icons)
-        new_name = f"{workspace.num}: {icon_str}"
+        new_name = f" {workspace.num}: {icon_str} /"
         
         # Renomeia o workspace
         i3.command(f'rename workspace "{workspace.name}" to "{new_name}"')
