@@ -12,7 +12,7 @@ set $mod Mod4
 # start a terminal
 bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+slash exec --no-startup-id flatpak run app.zen_browser.zen
-
+bindsym $mod+backslash exec flatpak run org.flameshot.Flameshot gui
 
 ###### Iniciar Programas ######
 
