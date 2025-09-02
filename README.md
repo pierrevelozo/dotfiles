@@ -9,6 +9,17 @@ git clone https://github.com/pierrevelozo/dotfiles.git
 sudo apt install i3* dunst nitrogen picom polybar rofi jq
 ~~~
 
+~~~
+
+rm -rf ~/.config/i3
+rm -rf ~/.config/dunst
+rm -rf ~/.config/nitrogen
+rm -rf ~/.config/picom
+rm -rf ~/.config/polybar
+rm -rf ~/wallpaper
+
+~~~
+
 Create the symbolic links:
 
 ~~~
