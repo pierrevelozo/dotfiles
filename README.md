@@ -10,12 +10,12 @@ sudo apt install i3* dunst nitrogen picom polybar rofi jq
 ~~~
 
 ~~~
-rm -rf ~/.config/i3
-rm -rf ~/.config/dunst
-rm -rf ~/.config/nitrogen
-rm -rf ~/.config/picom
-rm -rf ~/.config/polybar
-rm -rf ~/wallpaper
+rm -f ~/.config/i3
+rm -f ~/.config/dunst
+rm -f ~/.config/nitrogen
+rm -f ~/.config/picom
+rm -f ~/.config/polybar
+rm -f ~/wallpaper
 ~~~
 
 Create the symbolic links:
