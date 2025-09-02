@@ -6,7 +6,7 @@ How to install my linux rice.
 
 ~~~
 git clone https://github.com/pierrevelozo/dotfiles.git
-sudo apt install i3* dunst nitrogen picom polybar rofi
+sudo apt install i3* dunst nitrogen picom polybar rofi jq
 ~~~
 
 Create the symbolic links:
