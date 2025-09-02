@@ -1,3 +1,7 @@
+Created by Pierre Velozo - https://pierrevelozo.com
+
+
+
 How to install my linux rice.
 
 ~~~
@@ -13,4 +17,5 @@ ln -s ~/dotfiles/dunst ~/.config/dunst
 ln -s ~/dotfiles/nitrogen ~/.config/nitrogen
 ln -s ~/dotfiles/picom ~/.config/picom
 ln -s ~/dotfiles/polybar ~/.config/polybar
+ln -s ~/dotfiles/wallpaper ~/wallpaper
 ~~~

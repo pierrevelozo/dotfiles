@@ -1,11 +1,17 @@
-# Please see https://i3wm.org/docs/userguide.html for a complete reference!
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
+#==========================================================
+#
+#   Please see https://i3wm.org/docs/userguide.html for a complete reference!
+#
+#   Edited by Pierre Velozo - https://pierrevelozo.com
+#
+#==========================================================
 
 
 ###### Definindo Tecla Super ######
 set $mod Mod4
 
+###### Ajustar monitores ######
+exec_always --no-startup-id xrandr --output HDMI-2 --left-of HDMI-1
 
 ###### Atalhos de Teclado ######
 
@@ -32,9 +38,6 @@ exec_always --no-startup-id dunst
 # Inicia Rofi (Program launcher)
 bindsym $mod+d exec rofi -show drun
 bindsym $mod+x exec --no-startup-id ~/.config/rofi/powermenu.sh
-
-# Inicia o Script de nomear workspaces
-#exec_always --no-startup-id ~/.config/i3/i3-dynamic-workspaces.py
 
 
 ###### Default Gaps ######
